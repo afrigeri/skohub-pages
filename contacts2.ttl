@@ -1,0 +1,128 @@
+@prefix contact: <https://afrigeri.github.io/skohub-pages/contact/> .
+
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# GeoSciML / CGI controlled vocabularies
+@prefix cgiobs: <http://resource.geosciml.org/classifier/cgi/featureobservationmethod/> .
+
+#################################################################
+# Concept Scheme
+#################################################################
+
+contact:
+    a skos:ConceptScheme ;
+
+    dct:title
+        "Geologic Contact Certainty Vocabulary"@en ,
+        "Vocabolario della certezza dei contatti geologici"@it ;
+
+    skos:prefLabel
+        "Geologic contact certainty"@en ,
+        "Certezza dei contatti geologici"@it ;
+
+    skos:definition
+        "Controlled vocabulary for describing the positional and interpretative certainty of mapped geologic contacts."@en ,
+        "Vocabolario controllato per descrivere la certezza posizionale e interpretativa dei contatti geologici cartografati."@it ;
+
+    dct:creator "Alessandro Frigeri" ;
+
+    dct:created "2026-08-25"^^xsd:date ;
+
+    dct:license
+        <https://creativecommons.org/publicdomain/zero/1.0/> ;
+
+    skos:hasTopConcept
+        contact:certain ,
+        contact:approximate ,
+        contact:inferred .
+
+#################################################################
+# CERTAIN
+#################################################################
+
+contact:certain
+    a skos:Concept ;
+
+    skos:prefLabel
+        "certain"@en ,
+        "certo"@it ;
+
+    skos:altLabel
+        "accurately located"@en ,
+        "well located"@en ;
+
+    skos:definition
+        "A geologic contact whose mapped position is considered confidently located at the scale of the map."@en ,
+        "Contatto geologico la cui posizione cartografata è considerata definita con sufficiente affidabilità alla scala della carta."@it ;
+
+    skos:scopeNote
+        "Typically portrayed as a continuous line."@en ,
+        "Tipicamente rappresentato con una linea continua."@it ;
+
+    skos:notation "certain" ;
+
+    skos:inScheme contact: ;
+    skos:topConceptOf contact: .
+
+#################################################################
+# APPROXIMATE
+#################################################################
+
+contact:approximate
+    a skos:Concept ;
+
+    skos:prefLabel
+        "approximate"@en ,
+        "approssimato"@it ;
+
+    skos:altLabel
+        "approximately located"@en ,
+        "approximate location"@en ;
+
+    skos:definition
+        "A geologic contact whose existence is accepted but whose mapped position is only approximately constrained."@en ,
+        "Contatto geologico la cui esistenza è accettata, ma la cui posizione cartografata è determinata solo approssimativamente."@it ;
+
+    skos:scopeNote
+        "Typically portrayed using a dashed line."@en ,
+        "Tipicamente rappresentato mediante una linea tratteggiata."@it ;
+
+    skos:notation "approximate" ;
+
+    skos:inScheme contact: ;
+    skos:topConceptOf contact: .
+
+#################################################################
+# INFERRED
+#################################################################
+
+contact:inferred
+    a skos:Concept ;
+
+    skos:prefLabel
+        "inferred"@en ,
+        "inferito"@it ;
+
+    skos:altLabel
+        "interpreted"@en ,
+        "inferred contact"@en ;
+
+    skos:definition
+        "A geologic contact whose position or existence is inferred from indirect geological, morphological, geophysical, or remote-sensing evidence."@en ,
+        "Contatto geologico la cui posizione o esistenza è inferita da evidenze geologiche, morfologiche, geofisiche o di telerilevamento indirette."@it ;
+
+    skos:scopeNote
+        "Typically portrayed using a dotted or short-dashed line, depending on the adopted cartographic convention."@en ,
+        "Tipicamente rappresentato mediante una linea puntinata o a tratteggio corto, secondo la convenzione cartografica adottata."@it ;
+
+    skos:notation "inferred" ;
+
+    skos:related
+        cgiobs:indirect_method ;
+
+    skos:inScheme contact: ;
+    skos:topConceptOf contact: .

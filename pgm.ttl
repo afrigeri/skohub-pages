@@ -1,0 +1,22 @@
+@prefix lmap: <https://afrigeri.github.io/skohub-pages/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+@prefix cgiunit:
+    <http://resource.geosciml.org/classifier/cgi/geologicunittype/> .
+
+@prefix cgilith:
+    <http://resource.geosciml.org/classifier/cgi/lithology/> .
+	
+	
+	
+lmap:Im2
+    a skos:Concept ;
+
+    skos:prefLabel
+        "Imbrian Mare, Upper"@en ;
+    lmap:geologicUnitType
+        cgiunit:LithostratigraphicUnit ;
+
+    lmap:representativeLithology
+        cgilith:basalt .
