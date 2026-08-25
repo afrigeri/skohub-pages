@@ -1,4 +1,4 @@
-@prefix lmap: <https://vocab.lmap.org/> .
+@prefix contacts: <https://github.com/afrigeri/skohub-pages/> .
 @prefix contactpos: <https://vocab.lmap.org/contact-position/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
