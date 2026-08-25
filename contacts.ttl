@@ -1,6 +1,7 @@
-@prefix contacts: <https://github.com/afrigeri/skohub-pages/contacts/> .
-@prefix contactpos: <https://vocab.lmap.org/contact-position/> .
+@prefix contacts: <https://github.com/afrigeri/skohub-pages/contact/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 contactpos: a skos:ConceptScheme ;
     skos:prefLabel "Geologic contact positional certainty"@en .
@@ -8,7 +9,7 @@ contactpos: a skos:ConceptScheme ;
     dct:creator "Alessandro Frigeri"@it ;
     dct:created "2021-11-02"^^xsd:date ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    skos:hasTopConcept colour:violet, colour:blue .
+    skos:hasTopConcept contact:certain, contact:approximate .
 
 contactpos:certain a skos:Concept ;
     skos:prefLabel "certain"@en ;
