@@ -1,0 +1,25 @@
+@prefix lmap: <https://vocab.lmap.org/> .
+@prefix contactpos: <https://vocab.lmap.org/contact-position/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+contactpos:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Geologic contact positional certainty"@en .
+
+contactpos:certain
+    a skos:Concept ;
+    skos:prefLabel "certain"@en ;
+    skos:definition "The position of the contact is confidently located."@en ;
+    skos:inScheme contactpos: .
+
+contactpos:approximate
+    a skos:Concept ;
+    skos:prefLabel "approximate"@en ;
+    skos:definition "The position of the contact is approximately located."@en ;
+    skos:inScheme contactpos: .
+
+contactpos:inferred
+    a skos:Concept ;
+    skos:prefLabel "inferred"@en ;
+    skos:definition "The position of the contact is inferred from indirect geological evidence."@en ;
+    skos:inScheme contactpos: .
