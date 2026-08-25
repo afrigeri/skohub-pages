@@ -104,7 +104,7 @@ jobs:
     needs:
       - prepare-matrix
 
-    if: ${{ needs.prepare-matrix.outputs.matrix != '[]' }}
+    if: needs.prepare-matrix.outputs.matrix != '[]'
 
     steps:
       - name: Checkout repository
@@ -147,4 +147,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-		  
