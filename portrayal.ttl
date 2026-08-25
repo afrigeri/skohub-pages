@@ -1,0 +1,139 @@
+@prefix portrayal: <https://afrigeri.github.io/skohub-pages/portrayal/> .
+@prefix sym: <https://afrigeri.github.io/skohub-pages/symbol/> .
+
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Concept Scheme
+#################################################################
+
+portrayal:
+    a skos:ConceptScheme ;
+
+    dct:title
+        "Geologic Map Portrayal Specifications"@en ,
+        "Specifiche di rappresentazione cartografica geologica"@it ;
+
+    skos:prefLabel
+        "Geologic map portrayal specifications"@en ,
+        "Specifiche di portrayal per carte geologiche"@it ;
+
+    skos:definition
+        "Controlled vocabulary describing concrete cartographic portrayal implementations for geologic map symbols."@en ,
+        "Vocabolario controllato che descrive implementazioni concrete di rappresentazione cartografica per simboli geologici."@it ;
+
+    dct:creator "Alessandro Frigeri" ;
+
+    dct:created "2026-08-25"^^xsd:date ;
+
+    dct:license
+        <https://creativecommons.org/publicdomain/zero/1.0/> ;
+
+    skos:hasTopConcept
+        portrayal:sld-contact-certain ,
+        portrayal:sld-contact-approximate ,
+        portrayal:sld-contact-inferred .
+
+
+#################################################################
+# Certain contact — OGC SLD
+#################################################################
+
+portrayal:sld-contact-certain
+    a skos:Concept ;
+
+    skos:prefLabel
+        "SLD portrayal for certain contact"@en ,
+        "Portrayal SLD per contatto certo"@it ;
+
+    skos:definition
+        "OGC SLD portrayal specification for a geologic contact whose mapped position is considered certain."@en ,
+        "Specifica OGC SLD per la rappresentazione di un contatto geologico la cui posizione cartografata è considerata certa."@it ;
+
+    skos:notation "sld-contact-certain" ;
+
+    skos:related
+        sym:contact-certain ;
+
+    dct:format
+        "application/vnd.ogc.sld+xml" ;
+
+    dct:relation
+        <https://afrigeri.github.io/skohub-pages/styles/contact-certain.sld> ;
+
+    skos:scopeNote
+        "Rendered as a continuous line."@en ,
+        "Rappresentato mediante una linea continua."@it ;
+
+    skos:inScheme portrayal: ;
+    skos:topConceptOf portrayal: .
+
+
+#################################################################
+# Approximate contact — OGC SLD
+#################################################################
+
+portrayal:sld-contact-approximate
+    a skos:Concept ;
+
+    skos:prefLabel
+        "SLD portrayal for approximate contact"@en ,
+        "Portrayal SLD per contatto approssimato"@it ;
+
+    skos:definition
+        "OGC SLD portrayal specification for an approximately located geologic contact."@en ,
+        "Specifica OGC SLD per la rappresentazione di un contatto geologico la cui posizione è determinata approssimativamente."@it ;
+
+    skos:notation "sld-contact-approximate" ;
+
+    skos:related
+        sym:contact-approximate ;
+
+    dct:format
+        "application/vnd.ogc.sld+xml" ;
+
+    dct:relation
+        <https://afrigeri.github.io/skohub-pages/styles/contact-approximate.sld> ;
+
+    skos:scopeNote
+        "Rendered as a dashed line."@en ,
+        "Rappresentato mediante una linea tratteggiata."@it ;
+
+    skos:inScheme portrayal: ;
+    skos:topConceptOf portrayal: .
+
+
+#################################################################
+# Inferred contact — OGC SLD
+#################################################################
+
+portrayal:sld-contact-inferred
+    a skos:Concept ;
+
+    skos:prefLabel
+        "SLD portrayal for inferred contact"@en ,
+        "Portrayal SLD per contatto inferito"@it ;
+
+    skos:definition
+        "OGC SLD portrayal specification for an inferred geologic contact."@en ,
+        "Specifica OGC SLD per la rappresentazione di un contatto geologico inferito."@it ;
+
+    skos:notation "sld-contact-inferred" ;
+
+    skos:related
+        sym:contact-inferred ;
+
+    dct:format
+        "application/vnd.ogc.sld+xml" ;
+
+    dct:relation
+        <https://afrigeri.github.io/skohub-pages/styles/contact-inferred.sld> ;
+
+    skos:scopeNote
+        "Rendered as a dotted or short-dashed line according to the adopted cartographic convention."@en ,
+        "Rappresentato mediante una linea puntinata o a tratteggio corto secondo la convenzione cartografica adottata."@it ;
+
+    skos:inScheme portrayal: ;
+    skos:topConceptOf portrayal: .
